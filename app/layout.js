@@ -15,6 +15,9 @@ const vazirmatn = Vazirmatn({
 export const metadata = {
   title: "45993040",
   description: "فروشگاه لیاموند",
+  other: {
+    enamad: "45993040",
+  },
 };
 
 export default async function RootLayout({ children }) {
