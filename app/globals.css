@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-vazirmatn);
+  --font-mono: var(--font-vazirmatn);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-vazirmatn), Arial, Helvetica, sans-serif;
+}
+
+.sonner-toast,
+[data-sonner-toast] {
+  font-family: var(--font-vazirmatn), Arial, Helvetica, sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fade-slider .fade-swiper {
+  container-type: inline-size;
+  background: #e2e8f0;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+.fade-slider .swiper-button-next,
+.fade-slider .swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+}
+
+.fade-slider .swiper-button-next::after,
+.fade-slider .swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.fade-slider .swiper-button-next {
+  right: 18px;
+}
+
+.fade-slider .swiper-button-prev {
+  left: 18px;
+}
+
+.fade-slider .swiper-pagination {
+  bottom: 20px !important;
+}
+
+.fade-slider .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  background: white;
+  opacity: 0.55;
+  transition: width 300ms ease, opacity 300ms ease;
+}
+
+.fade-slider .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 999px;
+  opacity: 1;
+}
+
+.product-carousel .product-swiper {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.product-carousel .swiper-button-prev,
+.product-carousel .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  background: rgba(255, 255, 255, 0.96);
+  color: #0f172a;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
+}
+
+.product-carousel .swiper-button-prev {
+  right: 8px;
+  left: auto;
+}
+
+.product-carousel .swiper-button-next {
+  left: 8px;
+  right: auto;
+}
+
+.product-carousel .swiper-button-prev::after,
+.product-carousel .swiper-button-next::after {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.product-carousel .swiper-button-disabled {
+  opacity: 0.35;
+}
+
+.blog-carousel .blog-swiper {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.blog-carousel .swiper-button-prev,
+.blog-carousel .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  background: rgba(255, 255, 255, 0.96);
+  color: #0f172a;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
+}
+
+.blog-carousel .swiper-button-prev {
+  right: 8px;
+  left: auto;
+}
+
+.blog-carousel .swiper-button-next {
+  left: 8px;
+  right: auto;
+}
+
+.blog-carousel .swiper-button-prev::after,
+.blog-carousel .swiper-button-next::after {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.blog-carousel .swiper-button-disabled {
+  opacity: 0.35;
+}
+
+@media (max-width: 640px) {
+  .product-carousel .swiper-button-prev,
+  .product-carousel .swiper-button-next,
+  .blog-carousel .swiper-button-prev,
+  .blog-carousel .swiper-button-next {
+    width: 36px;
+    height: 36px;
+  }
+
+  .product-carousel .swiper-button-prev,
+  .blog-carousel .swiper-button-prev {
+    right: 4px;
+  }
+
+  .product-carousel .swiper-button-next,
+  .blog-carousel .swiper-button-next {
+    left: 4px;
+  }
+  .fade-slider .swiper-button-next,
+  .fade-slider .swiper-button-prev {
+    width: clamp(28px, 8cqw, 38px);
+    height: clamp(28px, 8cqw, 38px);
+  }
+
+  .fade-slider .swiper-button-next::after,
+  .fade-slider .swiper-button-prev::after {
+    font-size: clamp(11px, 3cqw, 16px);
+  }
+
+  .fade-slider .swiper-button-next {
+    right: clamp(6px, 2cqw, 12px);
+  }
+
+  .fade-slider .swiper-button-prev {
+    left: clamp(6px, 2cqw, 12px);
+  }
+
+  .fade-slider .swiper-pagination {
+    bottom: clamp(8px, 2cqw, 14px) !important;
+  }
+}
