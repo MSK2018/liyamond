@@ -13,10 +13,10 @@ const vazirmatn = Vazirmatn({
 });
 
 export const metadata = {
-  title: "50111936",
+  title: "45993040",
   description: "فروشگاه لیاموند",
   other: {
-    enamad: "50111936",
+    enamad: "45993040",
   },
 };
 
